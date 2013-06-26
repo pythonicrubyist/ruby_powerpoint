@@ -1,4 +1,4 @@
-= RubyPowerpoint -- Parser for RubyPowerpoint(pptx) files.
+= RubyPowerpoint -- Parser for Powerpoint(pptx) files.
 
 RubyPowerpoint is a simple Ruby gem that can extract text from Powerpont(pptx) files.
 
