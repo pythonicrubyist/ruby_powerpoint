@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'ruby_powerpoint/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "powerpoint"
+  spec.name          = "ruby_powerpoint"
   spec.version       = RubyPowerpoint::VERSION
   spec.authors       = ["pythonicrubyist"]
   spec.email         = ["pythonicrubyist@gmail.com"]
