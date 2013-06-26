@@ -1,0 +1,49 @@
+= RubyRubyPowerpoint -- Parser for RubyPowerpoint(pptx) files.
+
+RubyRubyPowerpoint is a simple Ruby gem that can extract text from Powerpont(pptx) files.
+
+
+== Installation
+
+RubyPowerpont can be used from the command line or as part of a Ruby web framework. To install the gem using terminal, run the following command:
+
+    gem install ruby_powerpoint
+
+To use it in Rails, add this line to your Gemfile:
+
+    gem "ruby_powerpoint"
+
+
+== Basic Usage
+RubyPowerpoint can simply parse an Excel file by looping through the rows enumerator:
+
+    require 'powerpint'
+    deck = RubyPowerpoint::Book.new "specs/fixtures/sample.ppts"
+    slide = deck.slides[0]
+
+    puts slde.content # => ["Prsentation Header", "Presentation Notes...", "12"]
+
+
+== Contributing
+
+Contributions are welcomed. You can fork a repository, add your code changes to the forked branch, ensure all existing unit tests pass, create new unit tests cover your new changes and finally create a pull request.
+
+After forking and then cloning the repository locally, install Bundler and then use it
+to install the development gem dependecies:
+
+    gem install bundler
+    bundle install
+
+Once this is complete, you should be able to run the test suite:
+
+    rake
+
+
+== Bug Reporting
+
+Please use the {Issues}[https://github.com/pythonicrubyist/powerpoint/issues] page to report bugs or suggest new enhancements.
+
+
+== License
+
+RubyPowerpoint has been published under {MIT License}[https://github.com/pythonicrubyist/powerpoint/blob/master/LICENSE.txt]
