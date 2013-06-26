@@ -19,9 +19,9 @@ RubyPowerpoint can simply parse a PowerPoint file(pptx) by extractng text from e
 
     require 'powerpint'
     deck = RubyPowerpoint::Presentation.new "specs/fixtures/sample.ppts"
-    slide = deck.slides[0]
-
-    puts slde.content # => ["Prsentation Header", "Presentation Notes...", "12"]
+    deck.slides.each do |slide|
+        puts slide.content # => ["Prsentation Header", "Presentation Notes...", "12"]
+    end
 
 
 == Contributing
