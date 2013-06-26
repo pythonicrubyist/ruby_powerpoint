@@ -3,6 +3,6 @@ require 'ruby_powerpoint/presentation'
 require 'ruby_powerpoint/slide'
 
 
-module RubyRubyPowerpoint
+module RubyPowerpoint
   # Your code goes here...
 end
