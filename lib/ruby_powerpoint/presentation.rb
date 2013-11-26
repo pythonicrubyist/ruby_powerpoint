@@ -1,6 +1,3 @@
-require 'zip/zipfilesystem'
-require 'nokogiri'
-
 module RubyPowerpoint
 
   class RubyPowerpoint::Presentation
