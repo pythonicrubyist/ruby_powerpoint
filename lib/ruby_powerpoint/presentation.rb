@@ -14,7 +14,7 @@ module RubyPowerpoint
 
     def slides
       slides = Array.new
-      @files.each_with_index do |doc, i|
+      @files.sort{|a,b| a.name <=> b.name}.each_with_index do |doc, i|
         if doc.name.include? 'ppt/slides/slide'
           slides.push RubyPowerpoint::Slide.new(self, doc.name, i)
         end
