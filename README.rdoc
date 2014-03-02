@@ -18,9 +18,12 @@ To use it in Rails, add this line to your Gemfile:
 RubyPowerpoint can simply parse a PowerPoint file(pptx) by extractng text from each slide:
 
     require 'ruby_powerpoint'
+    
     deck = RubyPowerpoint::Presentation.new "specs/fixtures/sample.pptx"
+    
     deck.slides.each do |slide|
-        puts slide.content # => ["Prsentation Header", "Presentation Notes...", "12"]
+        slide.content # => ["Prsentation Header", "Presentation Notes...", "12"]
+        slide.title # => "Prsentation Header"
     end
 
 
