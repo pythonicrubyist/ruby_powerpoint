@@ -20,6 +20,7 @@ describe 'RubyPowerpoint parsing a sample PPTX file' do
     @deck.slides.should_not eql []
     @deck.slides.first.content.should eql ["Some test ", "Powerpoint"]
     @deck.slides.first.content.should eql  ["Some test ", "Powerpoint"]
+    @deck.slides.first.images.first.should_not eql nil #"ppt/media/image1.jpeg"
     @deck.slides.last.title.should eql "Some title here" 
     @deck.slides.last.content.should eql ["Some title here", "Some txt here", "Some ", "more text here."]
   end
