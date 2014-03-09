@@ -1,6 +1,6 @@
 = RubyPowerpoint -- Parser for Powerpoint(pptx) files.
 
-RubyPowerpoint is a simple Ruby gem that can extract text from Powerpont(pptx) files.
+ruby_powerpoint is a Ruby gem that can extract title, content and images from Powerpont(pptx) slides.
 
 
 == Installation
@@ -15,15 +15,18 @@ To use it in Rails, add this line to your Gemfile:
 
 
 == Basic Usage
-RubyPowerpoint can simply parse a PowerPoint file(pptx) by extractng text from each slide:
+RubyPowerpoint can parse a PowerPoint file(pptx) by extractng text and images from each slide:
 
     require 'ruby_powerpoint'
     
     deck = RubyPowerpoint::Presentation.new "specs/fixtures/sample.pptx"
     
     deck.slides.each do |slide|
-        slide.content # => ["Prsentation Header", "Presentation Notes...", "12"]
-        slide.title # => "Prsentation Header"
+      slide.content # => ["Presentation Notes...", "12345"]
+      slide.title # => "Prsentation Header"
+      slide.images # => ["\xE3=\xA8h\x8E\x17\...."] Byte Stream
+      # Saving the image byte stream to a file:
+      File.open('temp.jpg', 'w'){|f| f.puts slide.images[0]}
     end
 
 

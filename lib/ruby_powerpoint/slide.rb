@@ -59,7 +59,7 @@ module RubyPowerpoint
     end
 
     def title_elements(xml)
-      shape_elements(xml).select{|shape| element_is_title(shape)}
+      shape_elements(xml).select{ |shape| element_is_title(shape) }
     end
     
     def content_elements(xml)
@@ -67,7 +67,7 @@ module RubyPowerpoint
     end
 
     def image_elements(xml)
-      xml.css('Relationship').select{ |node| element_is_image(node)}
+      xml.css('Relationship').select{ |node| element_is_image(node) }
     end    
 
     def shape_elements(xml)
@@ -75,7 +75,7 @@ module RubyPowerpoint
     end    
   
     def element_is_title(shape)
-      shape.xpath('.//p:nvSpPr/p:nvPr/p:ph').select{|prop| prop['type'] == 'title' || prop['type'] == 'ctrTitle'}.length > 0
+      shape.xpath('.//p:nvSpPr/p:nvPr/p:ph').select{ |prop| prop['type'] == 'title' || prop['type'] == 'ctrTitle' }.length > 0
     end
 
     def element_is_image(node)
