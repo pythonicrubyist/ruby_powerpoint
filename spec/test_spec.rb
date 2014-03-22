@@ -39,7 +39,7 @@ describe 'open rime.pptx file' do
   end
   
   it 'should have the right number of slides' do
-    @deck.slides.length.should eql 9
+    @deck.slides.length.should eql 12
   end
   
   it 'the old content method should work the same way' do
