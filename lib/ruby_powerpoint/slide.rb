@@ -47,7 +47,11 @@ module RubyPowerpoint
             node['Target'].gsub('..', 'ppt'))
         end
     end
-    
+   
+    def slide_num
+      @slide_xml_path.match(/slide([0-9]*)\.xml$/)[1].to_i
+    end
+ 
     private
 
     def extract_slide_number_from_path path

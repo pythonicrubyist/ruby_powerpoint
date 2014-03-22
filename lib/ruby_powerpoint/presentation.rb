@@ -14,12 +14,12 @@ module RubyPowerpoint
 
     def slides
       slides = Array.new
-      @files.sort{|a,b| a.name <=> b.name}.each do |f|
+      @files.each do |f|
         if f.name.include? 'ppt/slides/slide'
           slides.push RubyPowerpoint::Slide.new(self, f.name)
         end
       end
-      slides
+      slides.sort{|a,b| a.slide_num <=> b.slide_num}
     end
 
     def close
