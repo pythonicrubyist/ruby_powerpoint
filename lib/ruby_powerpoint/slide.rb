@@ -33,6 +33,10 @@ module RubyPowerpoint
       title_elements(xml).join(" ") if title_elements(xml).length > 0
     end
     
+    def slide_num
+      path.match(/slide([0-9]*)\.xml$/)[1].to_i
+    end
+    
     protected
     
     def title_elements(xml)
