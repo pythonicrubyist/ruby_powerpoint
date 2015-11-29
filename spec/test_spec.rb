@@ -29,6 +29,12 @@ describe 'RubyPowerpoint parsing a sample PPTX file' do
     image_byte_stream_2 = @deck.slides.last.images.first.read
     File.open('temp_2.jpg', 'w'){|f| f.puts image_byte_stream_2}
   end
+
+  it "it parses Slide Notes of a PPTX  slides" do
+    notes_content = @deck.slides[0].notes_content
+    notes_content.should eql ["Testing", " Multiline Notes.", "To be extracted here.", "Multiline notes extracted.", "1"]
+  end
+
 end
 
 describe 'open rime.pptx file' do
