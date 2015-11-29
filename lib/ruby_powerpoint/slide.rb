@@ -13,14 +13,22 @@ module RubyPowerpoint
       @presentation = presentation
       @slide_xml_path = slide_xml_path
       @slide_number = extract_slide_number_from_path slide_xml_path
+      @slide_notes_xml_path = "ppt/notesSlides/notesSlide#{@slide_number}.xml"
       @slide_file_name = extract_slide_file_name_from_path slide_xml_path
+
       parse_slide
+      parse_slide_notes
       parse_relation
     end
 
     def parse_slide 
       slide_doc = @presentation.files.file.open @slide_xml_path
       @slide_xml = Nokogiri::XML::Document.parse slide_doc
+    end
+
+    def parse_slide_notes
+      slide_notes_doc = @presentation.files.file.open @slide_notes_xml_path rescue nil
+      @slide_notes_xml = Nokogiri::XML::Document.parse(slide_notes_doc) if slide_notes_doc
     end
 
     def parse_relation
@@ -33,6 +41,10 @@ module RubyPowerpoint
 
     def content
       content_elements @slide_xml
+    end
+
+    def notes_content
+      content_elements @slide_notes_xml
     end
     
     def title
