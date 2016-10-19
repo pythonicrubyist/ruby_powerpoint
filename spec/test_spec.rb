@@ -24,7 +24,7 @@ describe 'RubyPowerpoint parsing a sample PPTX file' do
     File.open('temp_1.jpg', 'w'){|f| f.puts image_byte_stream_1}
 
     @deck.slides.first.images.first.should_not eql nil #"ppt/media/image1.jpeg"
-    @deck.slides.last.title.should eql "Some title here" 
+    @deck.slides.last.title.should eql "Some title here"
     @deck.slides.last.content.should eql ["Some title here", "Some txt here", "Some ", "more text here."]
     image_byte_stream_2 = @deck.slides.last.images.first.read
     File.open('temp_2.jpg', 'w'){|f| f.puts image_byte_stream_2}
@@ -45,20 +45,20 @@ describe 'open rime.pptx file' do
   after(:all) do
     @deck.close
   end
-  
+
   it 'opened rime.pptx successfully' do
     @deck.should_not be_nil
     @deck.slides.should_not eql []
   end
-  
+
   it 'should have the right number of slides' do
     @deck.slides.length.should eql 12
   end
-  
+
   it 'the old content method should work the same way' do
     @deck.slides[0].content.should eql ["The Rime of the Ancient Mariner", "(text of 1834)", "http://rpo.library.utoronto.ca/poems/rime-ancient-mariner-text-1834"]
   end
-  
+
   context 'the titles should be right' do
     it 'should be able to get a main slide (usually centered)' do
       @deck.slides[0].title.should eql "The Rime of the Ancient Mariner"
@@ -74,9 +74,23 @@ describe 'open rime.pptx file' do
       @deck.slides[5].title.should be_nil
       @deck.slides[6].title.should be_nil
     end
-    
+
     it 'should only get one title even if there are two things that visually look like titles' do
       @deck.slides[7].title.should eql "What if we have two"
+    end
+
+    context 'when slide contains paragraph' do
+      before(:all) do
+        @slide = @deck.slides[1]
+      end
+
+      it 'should return the list of paragraphs' do
+        @slide.paragraphs.count.should eql 2
+      end
+
+      it 'should return the content of the paragraph' do
+        @slide.paragraphs[0].content.should eq ['Argument']
+      end
     end
   end
 end
