@@ -26,7 +26,7 @@ RubyPowerpoint can parse a PowerPoint file(pptx) by extractng text and images fr
       slide.title # => "Prsentation Header"
       slide.images # => ["\xE3=\xA8h\x8E\x17\...."] Byte Stream
       # Saving the image byte stream to a file:
-      File.open('temp.jpg', 'w'){|f| f.puts slide.images[0]}
+      File.open('temp.jpg', 'w'){|f| f.puts slide.images[0].read}
     end
 
 
