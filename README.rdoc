@@ -1,5 +1,5 @@
-[![version](https://badge.fury.io/rb/ruby_powerpoint.svg)](https://badge.fury.io/rb/ruby_powerpoint)
-[![downloads](https://ruby-gem-downloads-badge.herokuapp.com/ruby_powerpoint?type=total&total_label=downloads)](https://ruby-gem-downloads-badge.herokuapp.com/ruby_powerpoint?type=total&total_label=downloads)
+{<img src="https://badge.fury.io/rb/ruby_powerpoint.svg" alt="Gem Version" />}[https://badge.fury.io/rb/ruby_powerpoint]
+{<img src="https://ruby-gem-downloads-badge.herokuapp.com/ruby_powerpoint?type=total&total_label=downloads" alt="Downloads" />}[https://ruby-gem-downloads-badge.herokuapp.com/ruby_powerpoint?type=total&total_label=downloads]
 
 = RubyPowerpoint -- Parser for Powerpoint(pptx) files.
 
