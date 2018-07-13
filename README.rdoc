@@ -1,3 +1,6 @@
+[![version](https://badge.fury.io/rb/ruby_powerpoint.svg)](https://badge.fury.io/rb/ruby_powerpoint)
+[![downloads](https://ruby-gem-downloads-badge.herokuapp.com/ruby_powerpoint?type=total&total_label=downloads)](https://ruby-gem-downloads-badge.herokuapp.com/ruby_powerpoint?type=total&total_label=downloads)
+
 = RubyPowerpoint -- Parser for Powerpoint(pptx) files.
 
 ruby_powerpoint is a Ruby gem that can extract title, content and images from Powerpont(pptx) slides.
