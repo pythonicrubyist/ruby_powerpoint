@@ -1,14 +1,14 @@
 {<img src="https://badge.fury.io/rb/ruby_powerpoint.svg" alt="Gem Version" />}[https://badge.fury.io/rb/ruby_powerpoint]
 {<img src="https://ruby-gem-downloads-badge.herokuapp.com/ruby_powerpoint?type=total&total_label=downloads" alt="Downloads" />}[https://ruby-gem-downloads-badge.herokuapp.com/ruby_powerpoint?type=total&total_label=downloads]
 
-= RubyPowerpoint -- Parser for Powerpoint(pptx) files.
+= RubyPowerpoint -- Parser for Powerpoint (pptx) files.
 
-ruby_powerpoint is a Ruby gem that can extract title, content and images from Powerpont(pptx) slides.
+ruby_powerpoint is a Ruby gem that can extract title, content and images from Powerpoint (pptx) slides.
 
 
 == Installation
 
-RubyPowerpont can be used from the command line or as part of a Ruby web framework. To install the gem using terminal, run the following command:
+RubyPowerpoint can be used from the command line or as part of a Ruby web framework. To install the gem using terminal, run the following command:
 
     gem install ruby_powerpoint
 
@@ -18,7 +18,7 @@ To use it in Rails, add this line to your Gemfile:
 
 
 == Basic Usage
-RubyPowerpoint can parse a PowerPoint file(pptx) by extractng text and images from each slide:
+RubyPowerpoint can parse a PowerPoint file (pptx) by extracting text and images from each slide:
 
     require 'ruby_powerpoint'
     
@@ -38,7 +38,7 @@ RubyPowerpoint can parse a PowerPoint file(pptx) by extractng text and images fr
 Contributions are welcomed. You can fork a repository, add your code changes to the forked branch, ensure all existing unit tests pass, create new unit tests cover your new changes and finally create a pull request.
 
 After forking and then cloning the repository locally, install Bundler and then use it
-to install the development gem dependecies:
+to install the development gem dependencies:
 
     gem install bundler
     bundle install

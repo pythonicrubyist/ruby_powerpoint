@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["pythonicrubyist"]
   spec.email         = ["pythonicrubyist@gmail.com"]
   spec.description   = %q{A Ruby gem that can extract text and images from PowerPoint (pptx) files.}
-  spec.summary       = %q{ruby_powerpoint is a Ruby gem that can extract title, content and images from Powerpont (pptx) slides.}
+  spec.summary       = %q{ruby_powerpoint is a Ruby gem that can extract title, content and images from Powerpoint (pptx) slides.}
   spec.homepage      = "https://github.com/pythonicrubyist/ruby_powerpoint"
   spec.license       = "MIT"
 
